@@ -2,38 +2,60 @@ body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #FFFFFF;
+    max-width: 1440px;
 }
 
-li {
-    list-style-type: none;
-}
-
-header {
-    width: 1440px;
-    height: 72px;
-    gap: 0px;
-    opacity: 0px;
-    display: flex;
-    margin: 24px 156px 24px 156px;
-    gap: 332px;
-}
-
-header a {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
-header ul,
-header li {
+img{
+    display: block;
+    max-width: 100%; /*GÖrüntü taşmalarını engellemek için*/
+    height: auto;    /*Görüntü oranın korumak için*/
+
+}
+
+.container {
+    max-width: 1200px;
+    /* Genel genişlik */
+    margin: 0 auto;
+    /* İçerik ortalaması */
+    padding: 0 15px;
+    /* Kenar boşlukları */
+}
+
+/* Header styling */
+.site-header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
     gap: 40px;
-
+    margin-left: 156px;
+    /* Eklenen özel düzen */
+    width: 1158px;
 }
 
-nav {
+/* Navigation */
+.main-nav {
     display: flex;
+    /* Display flex eklendi */
+    align-items: center;
+    gap: 40px;
 }
 
 .nav-logo {
+    margin-right: 76px;
+    /* Sağ kenar boşluğu eklendi */
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -41,132 +63,189 @@ nav {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    padding-top: 16px;
 }
 
-.nav-logo .logo-span {
+.logo-span {
     color: #2e2f42;
 }
 
-.nav-list__list-item .link {
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+/* Navigation list items */
+.nav-item {
+    padding: 24px 0;
+    /* Bütün liste elemanlarına uygulandı */
+}
+
+.nav-item .link {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding: 24px 0;
 }
 
-.nav-list__list-item .link:hover,
-.nav-list__list-item .link:focus {
+.nav-item .link:hover,
+.nav-item .link:focus {
     color: #404bbf;
 }
 
-.contact {
-    font-style: normal;
+/* Address styling */
+.contact-list {
+    display: flex;
 }
 
-.contact .link {
+.contact-list-ul {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-list-ul li a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
 
-.contact .link:hover,
-.contact .link:focus {
+.contact-list .link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.contact-list .link:hover,
+.contact-list .link:focus {
     color: #404bbf;
 }
 
+/* Section Styling */
+h1 {
+    max-width: 496px;
+}
+
+.first-section {
+    padding: 188px 0;
+    /* Kenar boşlukları */
+    background-color: #2e2f42;
+    /* Arka plan rengi */
+}
+
+.first-section .container {
+    text-align: center;
+    /* İlk bölüm özel stili */
+}
+
+/* Section Styling */
 .first-section {
     display: flex;
-    /* Flexbox etkinleştirilir */
     flex-direction: column;
-    /* Öğeleri dikey hizala */
+    /* İçeriği dikey hizalar */
     justify-content: center;
     /* Dikeyde ortalar */
     align-items: center;
     /* Yatayda ortalar */
+    padding: 188px 0;
+    /* Kenar boşlukları */
     background-color: #2e2f42;
-    width: 1440px;
-    height: 600px;
-    top: 72px;
-    
-
-}
-
-
-.first-section__title {
-    position: absolute;
-    /* Konumlandırma için gerekli */
-    width: 496px;
-    /* Yazının genişliği */
-    height: 120px;
-    /* Yazının yüksekliği */
-    top: 260px;
-    /* Sayfanın üstünden 260px boşluk */
-    left: 472px;
-    /* Sayfanın solundan 472px boşluk */
-    font-size: 56px;
-    /* Yazı boyutu */
-    line-height: 60px;
-    /* Satırlar arasındaki mesafe */
+    /* Arka plan rengi */
     text-align: center;
-    /* Yazıyı ortalar */
-    color: #FFFFFF;
-    /* Yazının rengi */
-    letter-spacing: 0.02em;
-    /* Harfler arası boşluk */
-    margin: 0;
-    /* Varsayılan dış boşluğu kaldırır */
-    line-height: 1.07;
+    /* İçeriği ortalar */
 }
 
+/* H1 Styling */
+.first-section__title {
+    max-width: 496px;
+    /* Başlığın genişliği */
+    font-size: 56px;
+    line-height: 60px;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+    /* Alt boşluk (düğme için) */
+}
 
-.first-section__btn {
+/* Button Styling */
+button {
+    display: block;
+    margin: 0 auto;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    background-color: #4d5ae5;
+    border-radius: 4px;
+    color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    color: #ffffff;
-    background-color: #4D5AE5;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    width: 169px;
-    height: 56px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    margin-top: 20px;
-    /* Düğme ile başlık arasındaki boşluk */
 }
 
-
+/* Button Hover and Focus Effects */
 .first-section__btn:hover,
 .first-section__btn:focus {
-    background-color: #404BBF;
+    background-color: #404bbf;
+    /* Hover ve focus efekti */
 }
 
-.second-section ul {
+.second-section {
+    padding: 120px 0;
+    /* Kenar boşlukları */
+}
+
+.container {
+    max-width: 1200px;
+    /* İsteğe bağlı genişlik sınırı */
+    margin: 0 auto;
+    /* Ortalama */
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.second-section__list {
     display: flex;
-    /* Flexbox etkinleştirilir */
-    align-items: center;
-    /* Dikeyde hizalar */
-    gap: 8px;
-    /* Kutular arasındaki mesafe */
-    padding: 156px;
+    gap: 24px;
+    /* Elementler arasındaki boşluk */
+    list-style: none;
+    /* Varsayılan madde işaretlerini kaldır */
+    padding: 0;
+    /* Varsayılan padding'i kaldır */
+    margin: 0;
+    /* Varsayılan margin'i kaldır */
 }
 
-.second-section li {
-    width: 264px;
-    height: 104px;
-
+.second-section__item {
+    width: calc((100% - 3 * 24px) / 4);
+    /* Liste öğesi genişliği */
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    /* Alternatif genişlik */
+    box-sizing: border-box;
+    /* Kenar boşluklarının genişlik hesaplamasına dahil edilmesi */
 }
 
 .second-section__list-title {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
-
 }
 
 .second-section .text {
@@ -177,61 +256,86 @@ nav {
 }
 
 .third-section {
+    padding: 120px 0;
     background-color: #f4f4fd;
-    width: 1440px;
-    height: 732px;
-    top: 1016px;
+    text-align: center;
+}
+
+.third-section .container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 32px 0;
 }
 
 .third-section__title {
     font-size: 36px;
     line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
 
-.third-section ul {
+.third-section__list {
     display: flex;
-    /* Flexbox etkinleştirilir */
-    align-items: center;
-    /* Dikeyde hizalar */
-    gap: 32px;
-    /* Kutular arasındaki mesafe */
-    padding: 156px;
-
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.third-section__list .list-item {
+.list-item {
     background-color: #ffffff;
-
+    border-radius: 4px;
+    /* Varsayılan yuvarlaklık */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 32px 0;
 }
 
-.third-section__list .member-name {
+/* İlk listedeki öğeye özel border-radius */
+.third-section__list .list-item:first-child {
+    border-radius: 0px 0px 4px 4px;
+    /* Alt köşeleri yuvarla */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f4f4fd;
+    margin-bottom: 16px;
+}
+
+.list-item__details {
+    padding: 16px;
+}
+
+.member-name {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
     color: #2e2f42;
-
+    margin-bottom: 8px;
 }
 
-.third-section__list .text {
+.text {
     font-size: 16px;
+    color: #434455;
     line-height: 1.5;
-    letter-spacing: 0.02em;
-
-
 }
+
+
 
 .forth-section {
-    width: 1128px;
-    height: 1000px;
-    padding-left: 156px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
-
+    padding: 120px 0;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .forth-section__title {
@@ -241,18 +345,46 @@ nav {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2E2F42;
+    margin-bottom: 72px;
 }
 
-.forth-section ul {
-    display: grid;
-    /* Grid düzenini etkinleştirir */
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 eşit sütun */
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    /* Öğeler arasındaki boşluk */
-    padding: 20px;
-    /* Kapsayıcı iç boşluk */
+.forth-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.list-item {
+    flex-basis: calc((100% - 2 * 24px)/3);
+    max-width: 360px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.list-item__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.list-item__content {
+    padding: 32px 16px;
+    margin-bottom: 8px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    /* Üst kenar sınırı kaldırıldı */
 }
 
 .list-item__title {
@@ -260,10 +392,11 @@ nav {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: #2e2f42;
+    color: #2E2F42;
+    margin-bottom: 8px;
 }
 
-.list-item .text {
+.text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -276,26 +409,26 @@ nav {
     height: 312px;
     display: flex;
     flex-direction: column;
-    /* İçerikleri dikey sıralar */
     align-items: flex-start;
-    /* Yatayda sola hizalar */
-    padding-top: 100px;
-    /* Tüm içerikler için yukarı boşluk */
-    padding-left: 156px;
+    justify-content: flex-start;
+    /* Eklenen özellik */
+    padding: 100px 0;
+    /* Doğru padding */
 }
 
-.footer p {
-    width: 264px;
-    height: 72px;
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    /* Çakışma olmaması için sıfırlandı */
+    margin-left: 156px;
+    /* padding-left yerine margin */
 }
 
-.footer .text {
-    color: #F4F4FD;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-}
-
-.footer-logo {
+.footer-logo_link {
+    display: inline-block;
+    margin-bottom: 16px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -305,8 +438,13 @@ nav {
     color: #4d5ae5;
 }
 
-
-
-.footer-logo .logo-span {
+.footer-logo_link .logo-span {
     color: #f4f4fd;
+}
+
+.footer-text {
+    max-width: 264px;
+    color: #F4F4FD;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
 }
